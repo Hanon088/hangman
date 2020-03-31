@@ -17,7 +17,8 @@ char *bg[] = {"          HANGMAN          \n        -----              \n       
 
 
 void screenUpdate(char *outputText);
-//void chooseDifficulty();
+//welcome_screen();
+//void chooseDifficulty(int level);
 void getWord();
 //void getHint();
 char *createProgressBar(char *word);
