@@ -37,7 +37,25 @@ int main(){
     sprintf(screenPtr, "%sHint: %s\n\n     %s\n", bg[0], hint, createProgressBar(choosenWord));
     screenUpdate(screenPtr);
     playGame();
-    printf("Exiting\n");
+    while(1){
+        printf("Play Again? (Y/N)\nOr M for menu\n");
+        char choice;
+        scanf(" %c", &choice);
+        if((int)choice == 'M' || (int)choice == 'm'){
+            fclose(fptr);
+            main();
+            break;}
+        else if((int)choice == 'Y' || (int)choice == 'y'){
+            system("@cls||clear");
+            getWordAndHint();
+            sprintf(screenPtr, "%sHint: %s\n\n     %s\n", bg[0], hint, createProgressBar(choosenWord));
+            screenUpdate(screenPtr);
+            playGame();}
+        else{
+            fclose(fptr);
+            printf("Exiting\n");
+            break;}
+    }
     return 0;
 }
 
