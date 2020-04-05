@@ -31,7 +31,7 @@ void playGame();
 int main(){
     //Main
     system("@cls||clear");
-    screenPtr = malloc(300 * sizeof(char));
+    screenPtr = malloc(600 * sizeof(char));
     setDifficulty(0);
     getWordAndHint();
     sprintf(screenPtr, "%sHint: %s\n\n     %s\n", bg[0], hint, createProgressBar(choosenWord));
