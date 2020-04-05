@@ -6,21 +6,22 @@
 
 char progressBar[51];
 char *screenPtr = NULL;
-char choosenWord[300];
+char choosenWord[51];
+char hint[250];
+char wordsArr[50][300];
 FILE *fptr;
-char *bg[] = {"          HANGMAN          \n        -----              \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  \n",
-              "          HANGMAN          \n        -----              \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  \n",
-              "          HANGMAN          \n        -----              \n       |     |             \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  \n",
-              "          HANGMAN          \n        -----              \n       |     |             \n       |     0             \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  \n",
-              "          HANGMAN          \n        -----              \n       |     |             \n       |     0             \n       |    /|\\            \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  \n",
-              "          HANGMAN          \n        -----              \n       |     |             \n       |     0             \n       |    /|\\            \n       |    / \\            \n       |                   \n       |                   \n       |                   \n      ___                  \n"};
+char *bg[] = {"          HANGMAN          \n        -----              \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
+              "          HANGMAN          \n        -----              \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
+              "          HANGMAN          \n        -----              \n       |     |             \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
+              "          HANGMAN          \n        -----              \n       |     |             \n       |     0             \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
+              "          HANGMAN          \n        -----              \n       |     |             \n       |     0             \n       |    /|\\            \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
+              "          HANGMAN          \n        -----              \n       |     |             \n       |     0             \n       |    /|\\            \n       |    / \\            \n       |                   \n       |                   \n       |                   \n      ___                  "};
 
 
 void screenUpdate(char *outputText);
 //welcome_screen();
-//void setDifficulty(int level);
-void getWord();
-//void getHint();
+int setDifficulty(int level);
+void getWordAndHint();
 char *createProgressBar(char *word);
 char *updateProgressBar(char ch);
 int notInProgressBar(char ch);
@@ -31,8 +32,9 @@ int main(){
     //Main
     system("@cls||clear");
     screenPtr = malloc(300 * sizeof(char));
-    getWord();
-    sprintf(screenPtr, "%s\n     %s", bg[0], createProgressBar(choosenWord));
+    setDifficulty(0);
+    getWordAndHint();
+    sprintf(screenPtr, "%sHint: %s\n\n     %s\n", bg[0], hint, createProgressBar(choosenWord));
     screenUpdate(screenPtr);
     playGame();
     printf("Exiting\n");
@@ -74,11 +76,34 @@ int pointCount(char ch){
     return count;
 }
 
-void getWord(){
-    char *words[] = {"test", "zoo", "demagogue", "cherry", "hello", "world", "dictator"};
+void getWordAndHint(){
     time_t t;
+    char bufferRaw[300], bufferWord[51];
+    int state = 0, num = 0;
     srand((unsigned) time(&t));
-    strcpy(choosenWord, words[rand() % (sizeof(words)/sizeof(words[0]))]);
+    strcpy(bufferRaw, wordsArr[rand() % (sizeof(wordsArr)/sizeof(wordsArr[0]))]);
+    for(int i = 0; i <= strlen(bufferRaw); i++){
+        if(state == 1){hint[num++] = bufferRaw[i];}
+        else if((int)bufferRaw[i] != ';'){
+            bufferWord[i] = bufferRaw[i];
+        }
+        else{
+            bufferWord[i] = '\0';
+            state = 1;
+        }
+    }
+    strcpy(choosenWord, bufferWord);
+}
+
+int setDifficulty(int level){
+    if(level == 0){fptr = fopen("easy_words.txt", "r");}
+    else if(level == 1){fptr = fopen("normal_words.txt", "r");}
+    else if(level == 2){fptr = fopen("hard_words.txt", "r");}
+    if(fptr == NULL){printf("Error opening file.");return -1;}
+    for(int i = 0; i < 50; i++){
+        fgets(wordsArr[i], 300, fptr);
+    }
+    return 0;
 }
 
 void playGame(){
@@ -92,14 +117,14 @@ void playGame(){
         for(int i = 0; i < strlen(choosenWord); i++){
             if((int)choosenWord[i] == temp && notInProgressBar(temp)){
                 points += pointCount(temp);
-                sprintf(screenPtr, "%s\n     %s\n%c is correct\n", bg[5-life], updateProgressBar(temp), temp);
+                sprintf(screenPtr, "%sHint: %s\n\n     %s\n\n%c is correct\n\n", bg[5-life], hint, updateProgressBar(temp), temp);
                 screenUpdate(screenPtr);
                 state = 1;
             }
         }
         if(!state){
             life--;
-            sprintf(screenPtr, "%s\n     %s\n%c is incorrect\n", bg[5-life], updateProgressBar(temp), temp);
+            sprintf(screenPtr, "%sHint: %s\n\n     %s\n\n%c is incorrect\n\n", bg[5-life], hint, updateProgressBar(temp), temp);
             screenUpdate(screenPtr);
             if(life <= 0){
                 printf("You died\n");
