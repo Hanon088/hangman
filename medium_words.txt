@@ -1,0 +1,70 @@
+luggage;something that you carry when you are travelling
+weekend;Saturday and Sunday
+aerobic;exercise
+flour;used to make bread or cakes
+flag;the symbol of each country
+truck;a large vehicle for carrying heavy items
+laugh;Ha ha ha
+camel;animal in desert
+winter;the coldest season
+summer;the hottest season
+architect;a person who designs buildings
+umbrella;used it when raining
+engineer;a person who designs and builds machines, roads or bridges
+minus;"-" in mathematics
+museum;This place have many historical things.
+folk;used with spoon
+wife;a married woman
+husband;a married man
+large;big
+midnight;12 o'clock at night
+vegetable;carrot, tomato, lettuce, cabbage
+kitten;a young cat
+pilot;a person who flying an airplane
+knock;hit something
+pan;used for cooking
+novel;a long printed story about imaginary characters and events
+absent;not in a class
+toilet;You can go there when you want to get rid of waste matter from your body.
+calendar;day, month and year
+zebra;This animal has black and white body.;
+aquarium;?a place where people can go to see fish and other sea animals
+autumn;the season between summer and winter, when leaves change colour and fall
+spaghetti;an Italian food
+towel;used for drying yourself
+difficult;opposite of easy
+center;a middle point
+stamp;on the envelope
+boil;very hot
+comics;a book that tells stories through pictures
+freeze;become ice
+stupid;showing a lack of intelligence
+yolk;yellow in egg
+capital;Bangkok, London, Tokyo
+square;four sides are equal
+standard;a level of quality
+guitar;a musical instrument that usually has six strings
+arrow;a sign that used to show direction or position
+popular;liked by many people
+coin;a piece of metal used as money
+statue;a figure of a person or animal
+aunt;the sister of father or mother
+uncle;the brother of father or mother
+puppy;a young dog
+century;a period of 100 years
+fantastic;excellent
+compass;used for finding directions
+knife;used for cutting in the kitchen
+actress;a woman who performs in dramas or films
+afraid;scared
+continent;Asia, Europe, Africa
+astronaut;a person who is travelled in a spacecraft
+scissors;a tool for cutting paper
+
+
+
+
+
+
+
+
