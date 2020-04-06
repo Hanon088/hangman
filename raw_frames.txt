@@ -53,3 +53,14 @@
        |                   \n
        |                   \n
       ___                  \n"
+
+"          HANGMAN          \n
+                           \n
+                           \n
+                           \n
+                           \n
+                           \n
+  EASY: PRESS A + ENTER    \n
+  NORMAL: PRESS S + ENTER  \n
+  HARD: PRESS D + ENTER    \n
+                           \n"

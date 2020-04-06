@@ -155,3 +155,27 @@ void playGame(){
             break;}
     }
 }
+
+void welcome_screen(){
+    sprintf(screenPtr, "          HANGMAN          \n
+                           \n
+                           \n
+                           \n
+                           \n
+                           \n
+  EASY: PRESS A + ENTER    \n
+  NORMAL: PRESS S + ENTER  \n
+  HARD: PRESS D + ENTER    \n
+                           \n");
+    screenUpdate(screenPtr);
+    char diff;
+    int level;
+    scanf(" %c", &diff);
+    if ((int)diff == 'A' || (int)diff == 'a'){
+        level = 0;
+    } else if ((int)diff == 'S' || (int)diff == 's'){
+        level = 1;
+    } else if ((int)diff == 'D' || (int)diff == 'd'){
+        level = 2;
+    return level;
+}
