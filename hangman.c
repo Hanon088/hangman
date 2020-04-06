@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include <stdlib.h>
 
 char progressBar[51];
 char *screenPtr = NULL;
