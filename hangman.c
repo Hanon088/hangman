@@ -19,7 +19,7 @@ char *bg[] = {"          HANGMAN          \n        -----              \n       
 
 
 void screenUpdate(char *outputText);
-//welcome_screen();
+void welcome_screen();
 int setDifficulty(int level);
 void getWordAndHint();
 char *createProgressBar(char *word);
@@ -32,7 +32,7 @@ int main(){
     //Main
     system("@cls||clear");
     screenPtr = malloc(600 * sizeof(char));
-    setDifficulty(0);
+    welcome_screen();
     getWordAndHint();
     sprintf(screenPtr, "%sHint: %s\n\n     %s\n", bg[0], hint, createProgressBar(choosenWord));
     screenUpdate(screenPtr);
@@ -115,7 +115,7 @@ void getWordAndHint(){
 
 int setDifficulty(int level){
     if(level == 0){fptr = fopen("easy_words.txt", "r");}
-    else if(level == 1){fptr = fopen("normal_words.txt", "r");}
+    else if(level == 1){fptr = fopen("medium_words.txt", "r");}
     else if(level == 2){fptr = fopen("hard_words.txt", "r");}
     if(fptr == NULL){printf("Error opening file.");return -1;}
     for(int i = 0; i < 50; i++){
@@ -157,25 +157,16 @@ void playGame(){
 }
 
 void welcome_screen(){
-    sprintf(screenPtr, "          HANGMAN          \n
-                           \n
-                           \n
-                           \n
-                           \n
-                           \n
-  EASY: PRESS A + ENTER    \n
-  NORMAL: PRESS S + ENTER  \n
-  HARD: PRESS D + ENTER    \n
-                           \n");
+    sprintf(screenPtr, "          HANGMAN          \n                           \n                           \n                           \n                           \n                           \n  EASY: PRESS A + ENTER    \n  NORMAL: PRESS S + ENTER  \n  HARD: PRESS D + ENTER    \n                           \n");
     screenUpdate(screenPtr);
     char diff;
     int level;
     scanf(" %c", &diff);
     if ((int)diff == 'A' || (int)diff == 'a'){
-        level = 0;
-    } else if ((int)diff == 'S' || (int)diff == 's'){
-        level = 1;
-    } else if ((int)diff == 'D' || (int)diff == 'd'){
-        level = 2;
-    return level;
+        level = 0;}
+    else if ((int)diff == 'S' || (int)diff == 's'){
+        level = 1;}
+    else if ((int)diff == 'D' || (int)diff == 'd'){
+        level = 2;}
+    setDifficulty(level);
 }
