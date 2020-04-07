@@ -127,23 +127,23 @@ int setDifficulty(int level){
 
 void playGame(){
     char temp;;
-    int state = 0, correctNum = 0, life = 5;
+    int state = 0, correctNum = 0, life = 5, count = 0;
     while(1){
         printf("Input a character: ");
         state = 0;
         scanf(" %c", &temp);
         system("@cls||clear");
-        for(int i = 0; i < strlen(choosenWord); i++){
-            if((int)choosenWord[i] == temp && notInProgressBar(temp)){
-                correctNum += correctCount(temp);
+        count = correctCount(temp);
+        if(count != 0){
+            if(notInProgressBar(temp)){
+                correctNum += count;
                 sprintf(screenPtr, "%sHint: %s\n\n     %s\n\n%c is correct\n\n", bg[5-life], hint, updateProgressBar(temp), temp);
-                screenUpdate(screenPtr);
-                state = 1;
-            }
-        }
+                }
+            screenUpdate(screenPtr);
+            state = 1;}
         if(!state){
             life--;
-            sprintf(screenPtr, "%sHint: %s\n\n     %s\n\n%c is incorrect\n\n", bg[5-life], hint, updateProgressBar(temp), temp);
+            sprintf(screenPtr, "%sHint: %s\n\n     %s\n\n%c is incorrect\n\n", bg[5-life], hint, progressBar, temp);
             screenUpdate(screenPtr);
             if(life <= 0){
                 printf("You died\n");
