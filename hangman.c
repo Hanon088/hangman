@@ -8,6 +8,7 @@ char *screenPtr = NULL;
 char choosenWord[51];
 char hint[250];
 char wordsArr[50][300];
+int points = 0;
 FILE *fptr;
 char *bg[] = {"          HANGMAN          \n        -----              \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
               "          HANGMAN          \n        -----              \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n       |                   \n      ___                  ",
@@ -24,7 +25,7 @@ void getWordAndHint();
 char *createProgressBar(char *word);
 char *updateProgressBar(char ch);
 int notInProgressBar(char ch);
-int pointCount(char ch);
+int correctCount(char ch);
 void playGame();
 
 int main(){
@@ -42,6 +43,7 @@ int main(){
         scanf(" %c", &choice);
         if((int)choice == 'M' || (int)choice == 'm'){
             fclose(fptr);
+            points = 0;
             main();
             break;}
         else if((int)choice == 'Y' || (int)choice == 'y'){
@@ -85,7 +87,7 @@ int notInProgressBar(char ch){
     return 1;
 }
 
-int pointCount(char ch){
+int correctCount(char ch){
     int count = 0;
     for(int i = 0;i < strlen(choosenWord); i++){
         if((int)choosenWord[i] == ch){count++;}
@@ -125,7 +127,7 @@ int setDifficulty(int level){
 
 void playGame(){
     char temp;;
-    int state = 0, points = 0, life = 5;
+    int state = 0, correctNum = 0, life = 5;
     while(1){
         printf("Input a character: ");
         state = 0;
@@ -133,7 +135,7 @@ void playGame(){
         system("@cls||clear");
         for(int i = 0; i < strlen(choosenWord); i++){
             if((int)choosenWord[i] == temp && notInProgressBar(temp)){
-                points += pointCount(temp);
+                correctNum += correctCount(temp);
                 sprintf(screenPtr, "%sHint: %s\n\n     %s\n\n%c is correct\n\n", bg[5-life], hint, updateProgressBar(temp), temp);
                 screenUpdate(screenPtr);
                 state = 1;
@@ -146,10 +148,12 @@ void playGame(){
             if(life <= 0){
                 printf("You died\n");
                 printf("The correct word is %s\n", choosenWord);
+                points = 0;
                 break;}
         }
-        if(points == strlen(choosenWord)){
+        if(correctNum == strlen(choosenWord)){
             printf("You won, the word is %s\n", choosenWord);
+            points++;
             printf("You've got %d points\n", points);
             break;}
     }
