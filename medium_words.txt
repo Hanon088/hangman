@@ -1,70 +1,52 @@
-luggage;something that you carry when you are travelling
+luggage;Something that you carry when you are travelling
 weekend;Saturday and Sunday
-aerobic;exercise
-flour;used to make bread or cakes
-flag;the symbol of each country
-truck;a large vehicle for carrying heavy items
+flour;Ginded grains
+truck;A large vehicle for carrying heavy items
 laugh;Ha ha ha
-camel;animal in desert
-winter;the coldest season
-summer;the hottest season
-architect;a person who designs buildings
-umbrella;used it when raining
-engineer;a person who designs and builds machines, roads or bridges
-minus;"-" in mathematics
+winter;The coldest season
+summer;The hottest season
+architect;A person who designs buildings
+umbrella;Used it when raining
+engineer;A person who designs and builds machines, roads or bridges
 museum;This place have many historical things.
-folk;used with spoon
-wife;a married woman
-husband;a married man
-large;big
-midnight;12 o'clock at night
-vegetable;carrot, tomato, lettuce, cabbage
-kitten;a young cat
-pilot;a person who flying an airplane
-knock;hit something
-pan;used for cooking
-novel;a long printed story about imaginary characters and events
-absent;not in a class
+folk;Many pointy ends, used with a spoon
+wife;A married woman
+husband;A married man
+large;Big
+midnig;t;12 o'clock at night
+vegetable;Carrot, tomato, lettuce, cabbage
+kitten;A young cat
+pilot;A person who flies an airplane
+pan;A flat apparatus with a handle, used for cooking
+novel;A long printed story about imaginary characters and events
 toilet;You can go there when you want to get rid of waste matter from your body.
-calendar;day, month and year
-zebra;This animal has black and white body.;
-aquarium;?a place where people can go to see fish and other sea animals
-autumn;the season between summer and winter, when leaves change colour and fall
-spaghetti;an Italian food
-towel;used for drying yourself
-difficult;opposite of easy
-center;a middle point
-stamp;on the envelope
-boil;very hot
-comics;a book that tells stories through pictures
-freeze;become ice
-stupid;showing a lack of intelligence
-yolk;yellow in egg
-capital;Bangkok, London, Tokyo
-square;four sides are equal
-standard;a level of quality
-guitar;a musical instrument that usually has six strings
-arrow;a sign that used to show direction or position
-popular;liked by many people
-coin;a piece of metal used as money
-statue;a figure of a person or animal
-aunt;the sister of father or mother
-uncle;the brother of father or mother
-puppy;a young dog
-century;a period of 100 years
-fantastic;excellent
-compass;used for finding directions
-knife;used for cutting in the kitchen
+calendar;An item that shows the date
+zebra;This animal has black and white body
+aquarium;A giant fish tank
+autumn;The season between summer and winter, when leaves change colour and fall
+astronaut;Space traveller
+towel;A large cloth used for drying yourself
+difficult;Opposite of easy
+center;A middle point
+stamp;A sticker on the envelope
+boil;Make a liquid very hot
+comics;A book that tells stories through pictures
+freeze;Make a liquid become solid through low temperature
+stupid;Showing a lack of intelligence
+yolk;The yellow part of an egg
+square;Polygon with four equal sides
+guitar;A musical instrument that usually has six strings
+arrow;A sign that used to show direction or position
+popular;Liked by many people
+coin;A piece of metal used as money
+statue;A figure of a person or animal
+aunt;The sister of a father or a mother
+uncle;The brother of a father or a mother
+puppy;A young dog
+century;A period of 100 years
+compass;A magnetic apparatus used for finding directions
+knife;Used for cutting in the kitchen
 actress;a woman who performs in dramas or films
 afraid;scared
 continent;Asia, Europe, Africa
-astronaut;a person who is travelled in a spacecraft
-scissors;a tool for cutting paper
-
-
-
-
-
-
-
-
+scissors;A tool for cutting paper
