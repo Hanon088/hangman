@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <ctype.h>
 
 char *progressBar = NULL;
 char *screenPtr = NULL;
@@ -83,14 +84,14 @@ char *createProgressBar(){
 
 char *updateProgressBar(char ch){
     for(int i = 0; i < strlen(choosenWord); i++){
-        if((int)choosenWord[i] == ch){progressBar[i] = ch;}
+        if((int)tolower(choosenWord[i]) == tolower(ch)){progressBar[i] = ch;}
     }
     return progressBar;
 }
 
 int notInProgressBar(char ch){
     for(int i = 0; i < strlen(progressBar); i++){
-        if((int)progressBar[i] == ch){return 0;}
+        if((int)tolower(progressBar[i]) == tolower(ch)){return 0;}
     }
     return 1;
 }
@@ -98,7 +99,7 @@ int notInProgressBar(char ch){
 int correctCount(char ch){
     int count = 0;
     for(int i = 0; i < strlen(choosenWord); i++){
-        if((int)choosenWord[i] == ch){count++;}
+        if((int)tolower(choosenWord[i]) == tolower(ch)){count++;}
     }
     return count;
 }

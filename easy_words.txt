@@ -1,51 +1,50 @@
-time;one of five dimension about clock
-year;twelve mounth
-people;a lot person
-way;parth to some location
-day;twenty four hours
-world;another word mean earth
+time;What does a clock shows
+year;Twelve months
+people;Plural of person
+way;Path to some location
+day;Twenty four hours
+world;Another name for Earth
 school;This place for learning
-student;customer in school
-group;put together
-country;a nation with its own government
-problem;a matter or situation regarded as unwelcome or harmful and needing to be dealt with and overcome.
-hand;the end part of a person's arm beyond the wrist, including the palm, fingers, and thumb.
-part;a piece or segment of something
-place;put in a particular position.
-case;an instance of a particular situation
-week;a period of seven days.
-company;a commercial business.
-system;a set of connected things or parts forming a complex
-program;a planned series of future events, items, or performances.
-question;a sentence worded or expressed so as to elicit information.
-work;activity involving mental or physical effort done in order to achieve a purpose or result.
-government;the governing body of a nation, state, or community.
-number;amount to (a specified figure or quantity)
-night;the period of time between afternoon and bedtime; an evening.
-point;the tapered, sharp end of a tool, weapon, or other object.
-home;the place where one lives permanently
-water;a colorless, transparent, odorless, tasteless liquid that forms the seas
-room; part or division of a building enclosed by walls, floor, and ceiling.
-mother;a woman in relation to a child or children to whom she has given birth.
-area;a region or part of a town, a country, or the world.
-money;a current medium of exchange in the form of coins
-story;an account of imaginary or real people and events told for entertainment.
-fact;a thing that is indisputably the case.
-month;each of the twelve named periods into which a year is divided.
-lot;a particular group, collection, or set of people or things.
-right;morally good, justified, or acceptable.
-study;a detailed investigation and analysis of a subject or situation.
-book;a bound set of blank sheets for writing or keeping records in.
-eye;look at or watch closely or with interest.
-job;an act of prodding, thrusting, or wrenching.
-word; single distinct meaningful element of speech
-business;a person's regular occupation, profession, or trade.
-issue;an important topic or problem for debate or discussion.
-side;a position to the left or right of an object, place, or central point.
-kind;a group of people or things having similar characteristics.
-head;be in the leading position on.
-house;a building for human habitation, especially one that is lived in by a family or small group of people.
-service;the action of helping or doing work for someone.
-friend;a person whom one knows and with whom one has a bond of mutual affection
-father;a man in relation to his natural child or children.
-
+student;Someone who studies in schools
+car;A vehicle with four wheels
+country;A nation with its own government
+problem;An unwelcome situation
+hand;The end part of a person's arm beyond the wrist, including the palm, fingers, and thumb.
+part;A piece or segment of something
+place;Put in a particular position.
+bird;An animal that have wings
+week;A period of seven days.
+company;A commercial business.
+system;A set of connected things or parts forming a complex
+program;A planned series of future events, items, or performances.
+question;A sentence worded or expressed so as to ask/elicit information.
+sun;It comes up every morning
+government;The governing body of a nation, state, or community.
+number;Amount to (a specified figure or quantity)
+night;The period of time from dusk to dawn
+point;The tapered, sharp end of a tool, weapon, or other object.
+home;The place where one lives permanently
+water;A colorless, transparent, odorless, tasteless liquid that forms the seas
+room;Part or division of a building enclosed by walls, floor, and ceiling.
+mother;A woman in relation to a child or children to whom she has given birth.
+area;A region or part of a town, a country, or the world.
+money;A current medium of exchange in the form of coins
+story;An account of imaginary or real people and events told for entertainment.
+fact;A thing that is indisputably the case.
+month;Each of the twelve named periods into which a year is divided.
+lot;A particular group, collection, or set of people or things.
+right;Morally good, justified, or acceptable.
+study;A detailed investigation and analysis of a subject or situation.
+book;A thing with pages you can read
+eyes;What do you see with, your?
+giraffe;An animal with super long neck
+free;Given without a price
+business;A person's regular occupation, profession, or trade.
+plants;Green things with leaves
+side;A position to the left or right of an object, place, or central point.
+kind;A group of people or things having similar characteristics.
+head;Be in the leading position on.
+house;A building for human habitation, especially one that is lived in by a family or small group of people.
+service;The action of helping or doing work for someone.
+friend;A person whom one knows and with whom one has a bond of mutual affection
+dad;Synonym for father
