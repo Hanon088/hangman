@@ -164,7 +164,7 @@ void playGame(){
 }
 
 void welcome_screen(){
-    sprintf(screenPtr, "          HANGMAN          \n                           \n                           \n                           \n                           \n                           \n  EASY: PRESS A + ENTER    \n  NORMAL: PRESS S + ENTER  \n  HARD: PRESS D + ENTER    \n                           \n");
+    sprintf(screenPtr, "\n   _\n  | |\n  | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __    \n  | '_ \\ / _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\   \n  | | | | (_| | | | | (_| | | | | | | (_| | | | |  \n  |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|  \n                      __/ |\n                     |___/\n\n             EASY: PRESS A + ENTER    \n            NORMAL: PRESS S + ENTER  \n             HARD: PRESS D + ENTER    \n\n");
     screenUpdate(screenPtr);
     char diff;
     int level;
