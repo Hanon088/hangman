@@ -151,6 +151,7 @@ void playGame(){
         state = 0;
         scanf(" %c", &temp);
         system("@cls||clear");
+        if((int)temp == ' '){continue;}
         count = correctCount(temp);
         if(count != 0){
             if(notInProgressBar(temp)){
