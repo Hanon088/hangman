@@ -14,6 +14,7 @@ Suwatphot Kalom นายสุวพจน์ กาลอม 62070211
 The game starts by clearing the screen and allocating spaces for all the texts that will be use, shows are a welcome screen, set the difficulty, get the words, and start the game loop.
 
 ___Each of the functions serve a specific purpose, which are:___
+
 ___main()___ The main fucntion that runs the program.
 
 ___screenUpdate()___ Updates the output on the screen.
