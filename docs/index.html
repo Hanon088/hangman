@@ -15,10 +15,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-sm-12">
-          <div>
-                <h3></h3>
+          <div name="eng">
                 <p>Do you remeber those hangman games we used to play in English class?
                 <br>We decided to make it into a terminal game, in a style similar to those early 80s computer games.</p>
+          </div>
+          <div name="th" style="display: none;">
+                <p>ไทย</p>
           </div>
           <br>
           <div class="row">
@@ -28,11 +30,16 @@
           </div>
           <br>
           <div>
+            <div name="eng">
             <h3>How to play?</h3>
             <p>After installing and compiling to fit your system, playing this game is simple, like the real life hangman played on a board.
             <br>After starting the game, you choose a dificulty level for the words you want, then you will be assigned random words to play.
             <br>Guess a letter or the entire word, and it will be added to your progress if you're correct, or the hangman will grow limbs and your life will decrease if you're wrong....
             <br>You can guess wrong 7 times.</p>
+            </div>
+            <div name="th" style="display: none;">
+              <p>ไทย</p>
+            </div>
             <div class="row">
               <div class="col-md-6 col-sm-12"><img src="images/peculiar.jpg" alt="failed to load img" max-width="90%" height="auto" margin="auto" class="img-fluid"></div>
               <div class="col-md-6 col-sm-12"><img src="images/peculiar2.jpg" alt="failed to load img" max-width="90%" height="auto" margin="auto" class="img-fluid"></div>
@@ -55,13 +62,52 @@
         </div>
       <div class="row">
           <div class="col-md-10 col-sm-12">
+            <div name="eng">
             <h3>Documentations</h3>
             <p>This game was made in C using just the standard libraries and requires nothing but the source code, the words.txt files, and a C compiler for your system to compile and run. For explanations of all the functions click <a href="https://github.com/Hanon088/hangman/blob/master/README.md">here</a>.</p>
+            <p>The game starts by clearing the screen and allocating spaces for all the texts that will be use, shows are a welcome screen, set the difficulty, get the words, and start the game loop.
+              <br><b>Each of the functions serve a specific purpose, which are:</b>
+              <br><b>main()</b> The main fucntion that runs the program.
+              <br><b>screenUpdate()</b> Updates the output on the screen.
+              <br><b>welcome_screen()</b>> Create a welcome screen to greet the player and choose the difficulty level.
+              <br><b>setDifficulty()</b> Open the words.txt files according to the difficulty choosen.
+              <br><b>getWordAndHint()</b> Choose a random word taken from the words.txt files.
+              <br><b>createProgressBar()</b> Create a progress bar used to show the letters guessed correctly.
+              <br><b>updateProgressBar()</b> Update the progress bar each time the player guessed correctly.
+              <br><b>notInProgressBar()</b> Check if a letter has already been guessed correctly.
+              <br><b>correctCount()</b> Count the number a letter appear in the choosen word.
+              <br><b>findSpace()</b> Find the number of whitespaces in the choosen word.
+              <br><b>playGame()</b> The main game loop that takes the input and count the scores.
+              <br><b>clearGame()</b> Clear all the memory and filestream.
+              </p>
+            </div>
+            <div name="th" style="display: none;">
+              <p>ไทย</p>
+            </div>
             <br>
             <a href="https://github.com/Hanon088/hangman"><button type="button" class="btn btn-primary">View All Files</button></a>
           </div>
       </div>
+      <div class="row">
+        <button type="button" id="langBtn" class="btn btn-primary">ภาษาไทย</button>
+      </div>
       </div>
   </div>
+  <script>
+    var lang = document.getElementById("langBtn");
+    lang.addEventListener("click", changeLang);
+    function changeLang(){
+      var eng = document.getElementsByName("eng");
+      var th = document.getElementsByName("th");
+      if(th[0].style.display == "none"){
+        for(let i = 0; i < eng.length; i++){eng[i].style.display = "none"; th[i].style.display = "block";}
+        lang.innerHTML = "English";
+      }
+      else{
+        for(let i = 0; i < eng.length; i++){eng[i].style.display = "block"; th[i].style.display = "none";}
+        lang.innerHTML = "ภาษาไทย";
+      }
+    }
+  </script>
 </body>
 </html>
