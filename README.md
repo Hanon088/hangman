@@ -19,7 +19,7 @@ ___main()___ The main fucntion that runs the program.
 
 ___screenUpdate()___ Updates the output on the screen.
 
-___welcome___screen()___ Create a welcome screen to greet the player and choose the difficulty level.
+___welcome_screen()___ Create a welcome screen to greet the player and choose the difficulty level.
 
 ___setDifficulty()___ Open the words.txt files according to the difficulty choosen.
 
