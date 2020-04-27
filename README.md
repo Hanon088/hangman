@@ -8,7 +8,7 @@ Tanate Sukdaipung นายธเนศ สุขได้พึ่ง 62070085
 
 Tawatchai Hanon นายธวัชชัย ฮานอน 62070088
 
-Suwatphot Kalom นายสุวพจน์ กาลอม 62070211
+Suwaphot Kalom นายสุวพจน์ กาลอม 62070211
 
 ### Documentations
 The game starts by clearing the screen and allocating spaces for all the texts that will be use, shows are a welcome screen, set the difficulty, get the words, and start the game loop.
