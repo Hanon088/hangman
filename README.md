@@ -2,7 +2,7 @@
 ### A terminal hangman game made in C.
 Made By
 
-Janisata Mukda นางสาวณิสตา มุกดา 62070025
+Janisata Mukda นางสาวจณิสตา มุกดา 62070025
 
 Tanate Sukdaipung นายธเนศ สุขได้พึ่ง 62070085
 
