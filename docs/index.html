@@ -40,7 +40,10 @@
             </div>
             <div name="th" style="display: none;">
               <h3>วิธีการเล่น</h3>
-              <p>ไทย</p>
+              <p>หลังจากดาว์นโหลดและคอมไพล์แล้ว วิธีเล่นเกมนี้ก็เหมือนกับวิธีการเล่น hangman บนกระดานในชีวิตจริง
+              <br>เมื่อเริ่มเกม คุณจะสามารถเลือกระดับความยากได้ 3 ระดับ (ง่าย ธรรมดา ยาก) จากนั้นเกมจะทำการสุ่มคำให้คุณเล่น
+              <br>คุณสามารถตอบทีละตัวอักษรหรือทั้งคำเลยก็ได้ หากคุณทายถูกจะถูกนับคะแนนจนครบทั้งคำ แต่หากทายผิด แขนขาของ hangman จะงอกออกมาแล้วชีวิตของคุณก็จะลดลง
+              <br>คุณสามารถตอบผิดได้ 7 ครั้ง</p>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-12"><img src="images/peculiar.jpg" alt="failed to load img" max-width="90%" height="auto" margin="auto" class="img-fluid"></div>
@@ -63,10 +66,10 @@
           </div>
         </div>
       <div class="row">
-          <div class="col-md-9 col-sm-12">
+          <div class="col-md-10 col-sm-12">
             <div name="eng">
             <h3>Documentations</h3>
-            <p>This game was made in C using just the standard libraries and requires nothing but the source code, the words.txt files, and a C compiler for your system to compile and run. For explanations of all the functions click <a href="https://github.com/Hanon088/hangman/blob/master/README.md">here</a>.</p>
+            <p>This game was made in C using just the standard libraries and requires nothing but the source code, the words.txt files,<br>and a C compiler for your system to compile and run.</p>
             <p>The game starts by clearing the screen and allocating spaces for all the texts that will be use, shows are a welcome screen, set the difficulty, get the words, and start the game loop.
               <br><b>Each of the functions serve a specific purpose, which are:</b>
               <br><b>main()</b> The main fucntion that runs the program.
@@ -84,7 +87,23 @@
               </p>
             </div>
             <div name="th" style="display: none;">
-              <p>ไทย</p>
+              <h3>Documentations</h3>
+              <p>เกมนี้ถูกสร้างในภาษา C โดยใช้เพียง standard libraries การเรียกใช้เกมนี้ต้องมีไฟล์คำศัพท์ และ คอมไพเลอร์ภาษา C เพื่อ คอมไพล์สำหรับคอมพิวเตอร์คุณ</p>
+              <p>เมื่อเริ่มเกมจะทำการล้างหน้าจอแล้วเตรียมพื้นที่ในRAMสำหรับเก็บข้อความและข้อมูลที่จะใช้ เปิดหน้าจอต้อนรับ เลือกระดับความยาก รับคำศัพท์จากไฟล์ที่เก็บไว้ แล้วเริ่มต้น loop เกม
+                <br><b>แต่ละฟังก์ชันในโค้ดของโปรแกรมมีหน้าที่ของตัวเอง ได้แก่:</b>
+                <br><b>main()</b> ฟังก์ชันที่ควบคุมการทำงานของโปรแกรม
+                <br><b>screenUpdate()</b> เปลี่ยนการแสดงผลบนหน้าจอ
+                <br><b>welcome_screen()</b>> หน้าจอต้อนรับและเลือกระดับความยาก
+                <br><b>setDifficulty()</b> นำเข้าคำศัพท์จากไฟล์ตามระดับความยากที่เลือก
+                <br><b>getWordAndHint()</b> สุ่มคำศัพท์จากไฟล์ที่นำเข้ามา
+                <br><b>createProgressBar()</b> สร้าง progress bar แสดงความยาวของคำและตัวอักษรที่ทายถูก
+                <br><b>updateProgressBar()</b> เพิ่มตัวอักษรใน progress bar
+                <br><b>notInProgressBar()</b> ตรวจดูว่าตัวอักษรถูกตอบไปแล้วหรือยัง
+                <br><b>correctCount()</b> นับจำนวนตัวอักษรที่ทายถูกในคำศัพท์
+                <br><b>findSpace()</b> ตรวจหาการเว้นระหว่างคำ (whitespace) ในคำศัพท์
+                <br><b>playGame()</b> ฟังก์ชันที่ควบคุมการ input output และนับคะแนนเกม
+                <br><b>clearGame()</b> ล้างความจำและคะแนนของเกม
+                </p>
             </div>
             <br>
             <a href="https://github.com/Hanon088/hangman"><button type="button" class="btn btn-primary">View All Files</button></a>
