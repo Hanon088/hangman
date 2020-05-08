@@ -38,3 +38,6 @@ ___findSpace()___ Find the number of whitespaces in the choosen word.
 ___playGame()___ The main game loop that takes the input and count the scores.
 
 ___clearGame()___ Clear all the memory and filestream.
+
+
+Website: https://hanon088.github.io/hangman/
